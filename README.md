@@ -5,8 +5,8 @@ Plays a bundled audio alert whenever you type an unknown command in the VS Code 
 ## Features
 
 - Detects **exit code 127** (POSIX standard for "command not found") via the VS Code Shell Integration API.
-- Plays any audio file you choose via a simple setting.
-- Falls back to a notification message if no audio file is configured.
+- Plays a bundled alert sound with zero configuration needed.
+- Override with any custom audio file via the `cidAcp.audioFilePath` setting.
 - Cross-platform playback: `afplay` (macOS), `aplay` (Linux), PowerShell `SoundPlayer` (Windows).
 
 ## Requirements
@@ -18,17 +18,17 @@ Plays a bundled audio alert whenever you type an unknown command in the VS Code 
 
 | Setting | Type | Default | Description |
 |---|---|---|---|
-| `faahExtension.audioFilePath` | `string` | `""` | Absolute path to the audio file to play on unknown command. Leave empty to show a notification instead. |
+| `cidAcp.audioFilePath` | `string` | `""` | Absolute path to a custom audio file to play on unknown command. Leave empty to use the bundled alert sound. |
 
 **Example** (in `settings.json`):
 ```json
-"faahExtension.audioFilePath": "/Users/you/sounds/mySound.mp3"
+"cidAcp.audioFilePath": "/Users/you/sounds/mySound.mp3"
 ```
 
 ## How to use
 
 1. Install the extension.
-2. Open **Settings** (`Cmd+,`) and search for `faahExtension`.
+2. Open **Settings** (`Cmd+,`) and search for `cidAcp`.
 3. Set `Audio File Path` to the absolute path of your audio file.
 4. Open a terminal and type any garbage command — your sound will play!
 
