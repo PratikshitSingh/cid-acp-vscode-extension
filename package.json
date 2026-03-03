@@ -2,7 +2,7 @@
   "name": "cid-acp-vscode-extension",
   "displayName": "CID-ACP",
   "description": "Plays a bundled audio alert whenever an unknown command (exit code 127) is run in the VS Code terminal. Override with your own audio file via Settings.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "PratikshitSingh",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "engines": {
     "vscode": "^1.93.0"
   },
+  "icon": "media/icon.png",
   "categories": ["Other"],
   "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
